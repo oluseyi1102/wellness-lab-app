@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellnessLab Diagnostics | Certified Medical Laboratory & Diagnostic Tests</title>
+  <meta name="description" content="Accurate clinical laboratory tests including Malaria, Blood Sugar, Cholesterol, Complete Blood Count, and health packages. Certified medical laboratory technician with same-day reports.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement & Lab Status Bar -->
+  <div class="lab-top-bar">
+    <div class="container top-bar-inner">
+      <div class="lab-status-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Laboratory Open: Accepting Walk-Ins &amp; Home Phlebotomy Bookings</span>
+      </div>
+      <div class="top-bar-contacts">
+        <a href="tel:+23481453895" class="top-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Emergency Lab Line: +234 8145 3895
+        </a>
+        <span class="top-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon - Sat: 7:00 AM - 7:00 PM | Sun: 8:00 AM - 2:00 PM
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo" aria-label="WellnessLab Diagnostics Home">
+        <div class="logo-symbol" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18h8"/><path d="M3 22h18"/><path d="m14 22 3-3-3-3"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-text">Wellness<span>Lab</span></div>
+          <span class="brand-sub">Clinical Diagnostics</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#tests" class="nav-link active">Medical Tests</a></li>
+        <li><a href="#about" class="nav-link">About Technician</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav CTA -->
+      <div class="nav-actions">
+        <button type="button" class="btn-google-signin" id="googleSignInBtn" aria-label="Sign in with Google">
+          <svg class="google-g-icon" width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+          <span class="google-signin-text" id="googleSignInLabel">Sign in with Google</span>
+        </button>
+        <a href="#tests" class="btn-header-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+          Book a Test
+        </a>
+        <button class="btn-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          Licensed Clinical Laboratory Technologist
+        </div>
+
+        <h1 class="hero-title">
+          Accurate Diagnostics. <br>
+          <span class="text-gradient">Rapid Results.</span> <br>
+          Trusted Care.
+        </h1>
+
+        <p class="hero-description">
+          Fast, affordable, and certified diagnostic tests performed with hospital-grade precision. 
+          Book tests for <strong>Malaria, Blood Sugar, Cholesterol, Complete Blood Count</strong>, and comprehensive wellness panels with same-day digital reports.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tests" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            Explore Test Catalog &amp; Prices
+          </a>
+          <button class="btn-secondary" onclick="openBookingForTest('complete-blood-count', 'home')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Request Home Sample Pickup
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-trust-badges">
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="trust-badge-text">
+              <strong>99.8% Accuracy</strong>
+              <span>Calibrated automated analyzers</span>
+            </div>
+          </div>
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="trust-badge-text">
+              <strong>Same-Day Reports</strong>
+              <span>Digital PDF &amp; WhatsApp delivery</span>
+            </div>
+          </div>
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="trust-badge-text">
+              <strong>ISO Standards</strong>
+              <span>Sterile, single-use phlebotomy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase Card -->
+      <div class="hero-showcase">
+        <div class="technician-card-showcase">
+          <div class="showcase-technician-header">
+            <div class="tech-avatar">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span class="tech-avatar-verified" title="Verified Medical Technologist">✓</span>
+            </div>
+            <div class="tech-info">
+              <h3>David Vance, MLS (ASCP)</h3>
+              <p>Lead Medical Laboratory Technologist</p>
+              <span class="tech-license-tag">License #MLT-98421 • 12+ Yrs Experience</span>
+            </div>
+          </div>
+
+          <!-- Quick Featured Tests Previews -->
+          <div class="hero-quick-card-list">
+            <div class="hero-mini-test">
+              <div class="mini-test-left">
+                <div class="mini-test-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h8"/><path d="M3 22h18"/><path d="m14 22 3-3-3-3"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/></svg>
+                </div>
+                <div>
+                  <div class="mini-test-name">Malaria Parasite Microscopy</div>
+                  <div class="mini-test-meta">30 Mins • Blood Smear</div>
+                </div>
+              </div>
+              <div class="mini-test-price">₦15,000</div>
+            </div>
+
+            <div class="hero-mini-test">
+              <div class="mini-test-left">
+                <div class="mini-test-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                </div>
+                <div>
+                  <div class="mini-test-name">Fasting Blood Sugar (FBS)</div>
+                  <div class="mini-test-meta">30 Mins • Fasting Required</div>
+                </div>
+              </div>
+              <div class="mini-test-price">₦10,000</div>
+            </div>
+
+            <div class="hero-mini-test">
+              <div class="mini-test-left">
+                <div class="mini-test-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </div>
+                <div>
+                  <div class="mini-test-name">Cholesterol &amp; Lipid Profile</div>
+                  <div class="mini-test-meta">2 - 4 Hours • Full Panel</div>
+                </div>
+              </div>
+              <div class="mini-test-price">₦32,000</div>
+            </div>
+          </div>
+
+          <button class="btn-book-test" style="width: 100%;" onclick="openBookingForTest('malaria-microscopy')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+            Book Instant Malaria Test (₦15,000)
+          </button>
+
+          <!-- Floating badge -->
+          <div class="floating-badge">
+            <div class="floating-badge-icon" aria-hidden="true">✓</div>
+            <div>
+              <p>Sample Integrity Guaranteed</p>
+              <strong>Sterile &amp; Barcoded Tracking</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Medical Lab Technician Section -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-image-column">
+        <div class="technician-portrait-card">
+          <div class="tech-badge-seal" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h8"/><path d="M3 22h18"/><path d="m14 22 3-3-3-3"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/></svg>
+          </div>
+          <h3>David Vance, B.MLS, MLS(ASCP)</h3>
+          <p class="role-title">Chief Clinical Laboratory Scientist &amp; Phlebotomist</p>
+          <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+            Certified Medical Laboratory Scientist with over 12 years of clinical pathology experience in hematology, clinical chemistry, parasitology, and microbiology.
+          </p>
+          <div class="tech-stats-row">
+            <div class="stat-box">
+              <strong>15,000+</strong>
+              <span>Tests Analyzed</span>
+            </div>
+            <div class="stat-box">
+              <strong>99.8%</strong>
+              <span>QC Accuracy</span>
+            </div>
+            <div class="stat-box">
+              <strong>12+ Yrs</strong>
+              <span>Clinical Practice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content-column">
+        <span class="section-tag">Direct From The Technologist</span>
+        <h2>Precision Diagnostics You Can Base Critical Medical Decisions On</h2>
+        <p>
+          Behind every reliable doctor's prescription is an accurate laboratory test. At WellnessLab, our certified laboratory technicians operate with meticulous attention to detail, following standardized Clinical and Laboratory Standards Institute (CLSI) guidelines.
+        </p>
+
+        <ul class="feature-checklist">
+          <li class="feature-check-item">
+            <div class="check-circle">✓</div>
+            <div>
+              <strong>Gentle, Safe Phlebotomy Protocol</strong>
+              <span>Single-use vacuum collection tubes and ultra-fine butterfly needles ensure a pain-free, sterile blood draw.</span>
+            </div>
+          </li>
+          <li class="feature-check-item">
+            <div class="check-circle">✓</div>
+            <div>
+              <strong>Calibrated Automated Clinical Analyzers</strong>
+              <span>Daily quality control calibration runs verify instrument linearity and eliminate human error.</span>
+            </div>
+          </li>
+          <li class="feature-check-item">
+            <div class="check-circle">✓</div>
+            <div>
+              <strong>Confidential Digital PDF Lab Reports</strong>
+              <span>Receive official tamper-proof medical reports directly via WhatsApp and email, ready to share with your physician.</span>
+            </div>
+          </li>
+          <li class="feature-check-item">
+            <div class="check-circle">✓</div>
+            <div>
+              <strong>Convenient Home Sample Collection</strong>
+              <span>Can't travel to the lab? Our licensed phlebotomist visits your home or office with temperature-controlled transit boxes.</span>
+            </div>
+          </li>
+        </ul>
+
+        <a href="#tests" class="btn-primary">View All Medical Tests &amp; Prices</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Tests Catalog Section (CORE COMPONENT) -->
+  <section class="tests-catalog-section" id="tests">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Test Menu &amp; Pricing</span>
+        <h2 class="section-title">Transparent Medical Tests &amp; Direct Booking</h2>
+        <p class="section-subtitle">
+          Search, compare turnaround times, and book laboratory tests with up-front pricing. No hidden fees or surprise hospital surcharges.
+        </p>
+      </div>
+
+      <!-- Catalog Interactive Controls: Search, Sort, Category Tabs -->
+      <div class="catalog-controls">
+        <div class="search-and-sort">
+          <div class="search-bar-wrapper">
+            <span class="search-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </span>
+            <input 
+              type="text" 
+              id="catalogSearchInput" 
+              class="catalog-search-input" 
+              placeholder="Search tests by name or condition (e.g., Malaria, Sugar, Cholesterol, Blood Count)..."
+              aria-label="Search tests"
+            >
+            <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear search input">✕</button>
+          </div>
+
+          <div class="sort-wrapper">
+            <label for="catalogSortSelect">Sort by:</label>
+            <select id="catalogSortSelect" class="sort-select">
+              <option value="recommended">Recommended</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="turnaround">Turnaround Speed</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-filter-tabs" role="tablist">
+          <button class="filter-tab active" data-category="all" role="tab">All Medical Tests</button>
+          <button class="filter-tab" data-category="routine" role="tab">Routine &amp; General</button>
+          <button class="filter-tab" data-category="metabolic" role="tab">Metabolic &amp; Blood Sugar</button>
+          <button class="filter-tab" data-category="cardiac" role="tab">Heart &amp; Cholesterol</button>
+          <button class="filter-tab" data-category="infectious" role="tab">Infectious (Malaria, Typhoid)</button>
+          <button class="filter-tab" data-category="specialized" role="tab">Hormones &amp; Specialized</button>
+        </div>
+      </div>
+
+      <!-- Active Filter Count Bar -->
+      <div class="catalog-stats-bar">
+        <div class="results-count">Showing <strong id="resultsCount">0</strong> diagnostic tests</div>
+        <div style="font-size: 0.85rem;">⚡ Immediate booking with instant confirmation</div>
+      </div>
+
+      <!-- Test Cards Dynamic Grid (Populated by tests-data.js & app.js) -->
+      <div class="tests-grid" id="testsGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="catalog-empty-state" id="catalogEmptyState">
+        <div class="empty-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="8"/></svg>
+        </div>
+        <h3>No medical tests found</h3>
+        <p>We couldn't find tests matching your search query. Try another keyword or reset the filters.</p>
+        <button class="btn-primary" id="resetFiltersBtn">Reset Search &amp; Show All Tests</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Diagnostic Health Packages Section -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Value Health Checkups</span>
+        <h2 class="section-title">Popular Comprehensive Health Packages</h2>
+        <p class="section-subtitle">
+          Save up to 35% with curated diagnostic test combinations designed for routine annual wellness, cardiovascular health, and preventive care.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1: Basic Screen -->
+        <div class="package-card">
+          <div>
+            <h3 class="package-title">Basic Health Screen</h3>
+            <p class="package-subtitle">Ideal for routine checkups, fever screening &amp; general baseline health.</p>
+
+            <div class="package-pricing">
+              <span class="package-price">₦49,000</span>
+              <span class="package-original-price">₦65,000</span>
+              <span class="package-savings">Save ₦16,000</span>
+            </div>
+
+            <ul class="package-tests-list">
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Malaria Parasite Smear (MP)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Fasting Blood Sugar (FBS)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete Blood Count (CBC)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Routine Urinalysis &amp; Microscopy
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn-book-package" onclick="openBookingForPackage('basic-wellness')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+            Book Package (₦49,000)
+          </button>
+        </div>
+
+        <!-- Package 2: Cardio-Metabolic (Highlighted) -->
+        <div class="package-card highlighted">
+          <div class="package-ribbon">Most Popular</div>
+          <div>
+            <h3 class="package-title">Cardio-Metabolic Panel</h3>
+            <p class="package-subtitle">Tailored specifically for blood sugar, heart health, and cholesterol risk.</p>
+
+            <div class="package-pricing">
+              <span class="package-price">₦79,000</span>
+              <span class="package-original-price">₦105,000</span>
+              <span class="package-savings">Save ₦26,000</span>
+            </div>
+
+            <ul class="package-tests-list">
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete Lipid Profile (Cholesterol Panel)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                HbA1c (3-Month Glycated Hemoglobin)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Fasting Blood Sugar (FBS)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Kidney / Renal Panel (Creatinine &amp; Urea)
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn-book-package" onclick="openBookingForPackage('cardio-diabetic')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+            Book Package (₦79,000)
+          </button>
+        </div>
+
+        <!-- Package 3: Executive Full Body -->
+        <div class="package-card">
+          <div>
+            <h3 class="package-title">Executive 360° Comprehensive</h3>
+            <p class="package-subtitle">Full diagnostic assessment evaluating heart, liver, kidneys, and blood profile.</p>
+
+            <div class="package-pricing">
+              <span class="package-price">₦129,000</span>
+              <span class="package-original-price">₦175,000</span>
+              <span class="package-savings">Save ₦46,000</span>
+            </div>
+
+            <ul class="package-tests-list">
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete Blood Count (CBC Differential)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete Lipid / Cholesterol Profile
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Liver Function Test Panel (LFT)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Kidney / Renal Panel (RFT)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Thyroid Stimulating Hormone (TSH)
+              </li>
+              <li class="package-test-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Urinalysis &amp; Chemical Dipstick
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn-book-package" onclick="openBookingForPackage('executive-full-body')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+            Book Package (₦129,000)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (Workflow) Section -->
+  <section class="workflow-section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Seamless Laboratory Process</span>
+        <h2 class="section-title">How Your Diagnostic Testing Works</h2>
+        <p class="section-subtitle">From simple online reservation to certified test report delivery in 4 easy steps.</p>
+      </div>
+
+      <div class="workflow-steps-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon-wrapper" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+          </div>
+          <h3 class="step-title">Select &amp; Book Test</h3>
+          <p class="step-desc">Pick your required diagnostic test or bundle with upfront transparent pricing and select your preferred date.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon-wrapper" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+          </div>
+          <h3 class="step-title">Sterile Sample Collection</h3>
+          <p class="step-desc">Visit our clean laboratory facility or choose convenient home phlebotomy sample collection by our licensed technologist.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon-wrapper" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h8"/><path d="M3 22h18"/><path d="m14 22 3-3-3-3"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/></svg>
+          </div>
+          <h3 class="step-title">High-Precision Analysis</h3>
+          <p class="step-desc">Your barcoded specimen is analyzed on high-grade automated analyzers with rigorous quality control double-checks.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon-wrapper" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <h3 class="step-title">Instant Digital Report</h3>
+          <p class="step-desc">Receive your digitally signed, physician-ready report directly via WhatsApp and PDF download within hours.</p>
+        </div>
+      </div>
+
+      <!-- Home Collection Highlight Banner -->
+      <div class="home-collection-banner">
+        <div class="banner-left">
+          <h3>Need Blood Drawn at Home or Your Workplace?</h3>
+          <p>We provide sterile, on-demand home phlebotomy sample collection. Our certified laboratory technician brings vacuum-sealed supplies and delivers rapid results directly to your phone.</p>
+        </div>
+        <div class="banner-right">
+          <button class="btn-primary" onclick="openBookingForTest('fasting-blood-sugar', 'home')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Book Home Collection
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-layout">
+      <div class="faq-info-card">
+        <span class="section-tag">Help &amp; Guidelines</span>
+        <h3>Have Questions About Your Lab Test?</h3>
+        <p>Learn more about fasting instructions, turnaround times, and report delivery. If you need immediate assistance, speak with our technician directly.</p>
+
+        <div class="quick-call-card">
+          <div class="quick-call-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Laboratory Help Desk:</strong>
+            <a href="tel:+23481453895">+234 8145 3895</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Do I need to fast before a Blood Sugar or Cholesterol test?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer" style="max-height: 200px;">
+            <div class="faq-answer-inner">
+              Yes. For Fasting Blood Sugar (FBS) and Complete Lipid Profile (Cholesterol), you should observe an 8 to 12 hour overnight fast. You can drink plain water, but avoid food, coffee, tea, juices, and smoking prior to sample collection.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How fast will my Malaria test results be ready?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our Malaria Rapid Antigen (RDT) test takes just 15 to 20 minutes, while gold-standard Giemsa-stained blood smear microscopy takes approximately 30 to 45 minutes. Results are delivered immediately.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the Home Sample Collection service work?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              When booking online, choose 'Home Sample Collection' and specify your preferred address and time slot. Our certified phlebotomist arrives with sterile vacutainers, alcohol swabs, and a temperature-regulated cool box to safely collect and transport your specimen.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are your laboratory reports accepted by doctors and hospitals?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, 100%. Our reports are formatted according to international clinical laboratory standards, include reference ranges, technologist signatures, and license numbers, making them fully valid for physician review, hospital records, and prescription issuance.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How will I receive my laboratory test results?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Your confidential, encrypted PDF report will be sent directly via WhatsApp and email as soon as testing is verified. You can also pick up a physical embossed copy directly at our laboratory front desk.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Lab Location Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visit or Inquire</span>
+        <h2 class="section-title">Laboratory Location &amp; Contact Details</h2>
+        <p class="section-subtitle">Walk in for rapid sample collection or contact our technician for advice on test preparation.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4 class="contact-card-title">Laboratory Address</h4>
+          <p class="contact-card-desc">
+            Suite 104, Medical Diagnostic Plaza<br>
+            450 Health Avenue, Central District<br>
+            Opposite City General Hospital
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h4 class="contact-card-title">Direct Phone &amp; WhatsApp</h4>
+          <p class="contact-card-desc">
+            Phone: <a href="tel:+23481453895" style="color: var(--teal-700); font-weight: 700;">+234 8145 3895</a><br>
+            WhatsApp: <a href="https://wa.me/2348145389549" target="_blank" style="color: var(--emerald-dark); font-weight: 700;">+234 8145389549</a><br>
+            Email: lab@wellnessdiagnostics.com
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon contact-icon-amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4 class="contact-card-title">Operating Hours</h4>
+          <p class="contact-card-desc">
+            Monday – Friday: 7:00 AM – 7:00 PM<br>
+            Saturday: 7:30 AM – 5:00 PM<br>
+            Sunday: 8:00 AM – 2:00 PM (Emergency testing)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>WellnessLab Diagnostics</h4>
+          <p>
+            Certified clinical diagnostic laboratory led by licensed medical laboratory technologists. Providing accurate, rapid, and compassionate diagnostic testing services.
+          </p>
+          <div style="font-size: 0.8rem; color: #94a3b8;">
+            Accreditation: CLIA Compliant • ISO 15189 Quality Management Guidelines
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h5>Key Tests</h5>
+          <ul class="footer-links-list">
+            <li><a href="#tests" onclick="openBookingForTest('malaria-microscopy')">Malaria Parasite Smear</a></li>
+            <li><a href="#tests" onclick="openBookingForTest('fasting-blood-sugar')">Fasting Blood Sugar</a></li>
+            <li><a href="#tests" onclick="openBookingForTest('lipid-profile-cholesterol')">Lipid Profile / Cholesterol</a></li>
+            <li><a href="#tests" onclick="openBookingForTest('complete-blood-count')">Complete Blood Count (CBC)</a></li>
+            <li><a href="#tests" onclick="openBookingForTest('hba1c-glycated')">HbA1c Diabetes Control</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Medical Technologist</a></li>
+            <li><a href="#packages">Discounted Health Packages</a></li>
+            <li><a href="#workflow">Sample Collection Workflow</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#contact">Lab Directions &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5>Lab Operating Hours</h5>
+          <div class="lab-hours-badge">
+            <p><span>Mon - Fri:</span> <strong>7:00 AM - 7:00 PM</strong></p>
+            <p><span>Saturday:</span> <strong>7:30 AM - 5:00 PM</strong></p>
+            <p><span>Sunday:</span> <strong>8:00 AM - 2:00 PM</strong></p>
+            <p style="margin-top: 0.5rem; color: #10b981; font-weight: 600;">Walk-Ins Always Welcome</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 WellnessLab Clinical Diagnostics. All rights reserved. Designed for professional medical laboratory services.
+        </div>
+        <div style="color: #64748b; font-size: 0.8rem;">
+          Medical Disclaimer: Laboratory results provide diagnostic indicators and should be evaluated by a licensed medical practitioner.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/tests-data.js"></script>
+
+  <!-- Supabase JS SDK (UMD build exposes the global `supabase`) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Local Supabase config bridge (mirrors the values in .env) -->
+  <script src="js/supabase-config.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

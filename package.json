@@ -1,0 +1,10 @@
+{
+  "name": "wellness-lab-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WellnessLab Diagnostics - static landing + checkout site (vanilla HTML/CSS/JS, no build step).",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}
