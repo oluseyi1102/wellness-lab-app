@@ -271,6 +271,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.anonKey)
         : null);
 
+  // The id of the signed-in user, or null for guests. Sent as `user_id` on
+  // the insert so the RLS policy on `bookings` can check the row belongs to
+  // the person submitting it (see sql/create-bookings-table.sql).
+  async function getSessionUserId() {
+    if (!supabaseClient) return null;
+    try {
+      const { data } = await supabaseClient.auth.getSession();
+      return data && data.session && data.session.user ? data.session.user.id : null;
+    } catch (err) {
+      console.error('[WellnessLab] Could not read session for booking:', err);
+      return null;
+    }
+  }
+
   // Inserts one booking row into the `bookings` table.
   // Returns { ok: boolean, error: string|null } so the UI can react safely.
   async function saveBookingToSupabase(payload) {
@@ -328,7 +342,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setSaving(true);
 
+      // Attribute the booking to the signed-in user (null for guests) so the
+      // `bookings` RLS insert policy can verify ownership. Without this the
+      // insert fails with 42501 for authenticated users.
+      const userId = await getSessionUserId();
+
       const { ok, error } = await saveBookingToSupabase({
+        user_id: userId,
         patient_name: patientName,
         phone_number: phone,
         address: serviceType === 'home' ? address : 'WellnessLab Clinical Center (Walk-in)',

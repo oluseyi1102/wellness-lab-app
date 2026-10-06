@@ -10,7 +10,8 @@
  * PUBLIC vs SECRET KEYS
  *   - The `anon` / "publishable" key is PUBLIC by design. It is safe to ship
  *     to the browser because Row Level Security (RLS) on the `bookings` table
- *     only lets an anonymous visitor INSERT a booking.
+ *     only lets a visitor INSERT a booking (guests unattributed, signed-in
+ *     users their own row) and never read anyone's data.
  *   - NEVER put the `service_role` / secret key in this file. It bypasses RLS
  *     and must stay on a trusted server only.
  * ==========================================================================
