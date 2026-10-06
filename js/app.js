@@ -134,6 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
               Book Now
             </button>
+
+            <!-- ADD TO CART (persisted to Supabase when signed in) -->
+            <button type="button" class="btn-add-cart" onclick="addTestToCart('${test.id}')" aria-label="Add ${test.name} to cart">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+              Add to Cart
+            </button>
           </div>
         </article>
       `;
@@ -219,6 +225,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.location.href = `checkout.html?${new URLSearchParams({ pkg: pkg.id }).toString()}`;
+  };
+
+  // Global add-to-cart helpers used by the "Add to Cart" buttons on the test
+  // and package cards. They hand items to the persistent cart module (js/cart.js)
+  // which stores them in the Supabase `cart` table when the user is signed in.
+  //
+  // If the cart module hasn't registered itself yet (slow script, OAuth
+  // redirect reload), wait briefly instead of failing the click outright.
+  function withCart(fn, attemptsLeft) {
+    const cart = window.WELLNESSLAB_CART;
+    if (cart) {
+      fn(cart);
+      return;
+    }
+    if ((attemptsLeft === undefined ? 20 : attemptsLeft) <= 0) {
+      showToast('Cart is not available right now.');
+      return;
+    }
+    setTimeout(() => withCart(fn, (attemptsLeft === undefined ? 20 : attemptsLeft) - 1), 100);
+  }
+
+  window.addTestToCart = function(testId) {
+    const test = MEDICAL_TESTS.find(t => t.id === testId);
+    if (!test) {
+      showToast('Sorry, we could not find that test.');
+      return;
+    }
+    withCart((cart) => {
+      cart.addItem({
+        id: test.id,
+        type: 'test',
+        name: test.name,
+        price: test.price,
+        image: test.image,
+        meta: `${test.turnaround} • ${test.sampleType}`
+      });
+    });
+  };
+
+  window.addPackageToCart = function(packageId) {
+    const pkg = PACKAGES.find(p => p.id === packageId);
+    if (!pkg) {
+      showToast('Sorry, we could not find that health package.');
+      return;
+    }
+    withCart((cart) => {
+      cart.addItem({
+        id: pkg.id,
+        type: 'package',
+        name: pkg.title,
+        price: pkg.price,
+        image: pkg.image,
+        meta: `${pkg.testsIncluded.length} tests included • ${pkg.turnaround}`
+      });
+    });
   };
 
   // FAQ Accordion

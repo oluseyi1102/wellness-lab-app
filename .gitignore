@@ -20,3 +20,6 @@ Desktop.ini
 
 # Temp files
 *.tmp
+
+# Local scratch notes with OAuth credentials (never commit)
+Copied text.txt

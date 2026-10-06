@@ -263,9 +263,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Supabase client (credentials come from js/supabase-config.js, mirroring .env)
   // ---------------------------------------------------------------------------
   const supabaseConfig = window.WELLNESSLAB_SUPABASE || {};
-  const supabaseClient = (typeof window.supabase !== 'undefined' && supabaseConfig.url && supabaseConfig.anonKey)
-    ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.anonKey)
-    : null;
+  // Shared singleton client (see js/supabase-config.js) - one client per page
+  // so auth.js / cart.js / checkout.js don't race over the OAuth callback.
+  const supabaseClient = typeof supabaseConfig.getClient === 'function'
+    ? supabaseConfig.getClient()
+    : ((typeof window.supabase !== 'undefined' && supabaseConfig.url && supabaseConfig.anonKey)
+        ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.anonKey)
+        : null);
 
   // Inserts one booking row into the `bookings` table.
   // Returns { ok: boolean, error: string|null } so the UI can react safely.

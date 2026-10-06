@@ -22,12 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const SIGNED_OUT_TEXT = 'Sign in with Google';
 
   // -------------------------------------------------------------------------
-  // Supabase client (credentials come from js/supabase-config.js, mirroring .env)
+  // Supabase client (credentials come from js/supabase-config.js, mirroring .env).
+  // Uses the SHARED singleton so this script and js/cart.js don't create two
+  // competing clients that race to consume the OAuth redirect URL.
   // -------------------------------------------------------------------------
   const config = window.WELLNESSLAB_SUPABASE || {};
-  const supabaseClient = (typeof window.supabase !== 'undefined' && config.url && config.anonKey)
-    ? window.supabase.createClient(config.url, config.anonKey)
-    : null;
+  const supabaseClient = typeof config.getClient === 'function'
+    ? config.getClient()
+    : ((typeof window.supabase !== 'undefined' && config.url && config.anonKey)
+        ? window.supabase.createClient(config.url, config.anonKey)
+        : null);
 
   // Opening the site straight from disk (file://) breaks OAuth.
   if (window.location.protocol === 'file:') {
